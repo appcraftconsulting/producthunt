@@ -8,7 +8,7 @@
 import SafariServices
 import UIKit
 
-class PHManager {
+public class PHManager {
     static let shared = PHManager()
     
     /// The post that will be linked to the `PHButton`.

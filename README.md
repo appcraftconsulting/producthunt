@@ -49,7 +49,12 @@ PHManager.shared.presentingViewController = self
 ```
 4. Add a `PHButton` to your storyboard, XIB file, or instantiate it programmatically. To add the button to your storyboard or XIB file, add a View and set its custom class to `PHButton`.
 
-![Product Hunt badge]("https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button.png")
+<p align="center">
+<br>
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button.png" width="260">
+</p>
+
+![Product Hunt badge]("")
 
 ## Installation
 

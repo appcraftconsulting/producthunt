@@ -12,6 +12,10 @@ public class PHButton: UIButton {
     private let upvotesLabel = UILabel()
     private var observer: NSKeyValueObservation?
 
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -19,16 +23,11 @@ public class PHButton: UIButton {
         addObservers()
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        addObservers()
-    }
-    
     public override func awakeFromNib() {
         super.awakeFromNib()
         
         setup()
+        addObservers()
     }
     
     deinit {

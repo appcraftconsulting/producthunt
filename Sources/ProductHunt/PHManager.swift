@@ -9,7 +9,7 @@
 import SafariServices
 import UIKit
 
-public class PHManager {
+public class PHManager: NSObject, SFSafariViewControllerDelegate {
     public static let shared = PHManager()
     
     /// The post that will be linked to the `PHButton`.
@@ -25,7 +25,9 @@ public class PHManager {
     private var session = URLSession.shared
     private let token = "Ou0qvqpdX7dT1Y4h4CSK3aKMW6-BaxzE6MxDNeop1Zk"
     
-    private init() {
+    private override init() {
+        super.init()
+        
         Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { [weak self] timer in
             self?.fetchVotesCount()
         }
@@ -42,8 +44,15 @@ public class PHManager {
             let viewController = SFSafariViewController(url: url)
             viewController.preferredControlTintColor = UIColor(asset: .foreground)
             viewController.modalPresentationStyle = .formSheet
+            viewController.delegate = self
             presentingViewController.present(viewController, animated: true)
         }
+    }
+    
+    // MARK: - SFSafariViewControllerDelegate
+    
+    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        fetchVotesCount()
     }
     
     // MARK: - Private functions

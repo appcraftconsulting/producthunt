@@ -47,6 +47,21 @@ public class PHButton: UIButton {
         layer.borderColor = UIColor(asset: .border)?.cgColor
     }
     
+    // MARK: - Internal functions
+    
+    internal func setVotesCount(_ votesCount: Int?) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.paragraphSpacing = -2
+        paragraphStyle.alignment = .center
+        
+        var attributes = [NSAttributedString.Key : Any]()
+        attributes[.font] = UIFont.defaultFont(ofSize: 14)
+        attributes[.foregroundColor] = UIColor(asset: .foreground)
+        attributes[.paragraphStyle] = paragraphStyle
+    
+        upvotesLabel.attributedText = .init(string: "▲\n\(votesCount ?? 0)", attributes: attributes)
+    }
+    
     // MARK: - Private functions
     
     private func setup() {
@@ -93,19 +108,6 @@ public class PHButton: UIButton {
             titleLabel.numberOfLines = 0
             upvotesLabel.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: 8).isActive = true
         }
-    }
-    
-    private func setVotesCount(_ votesCount: Int?) {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.paragraphSpacing = -2
-        paragraphStyle.alignment = .center
-        
-        var attributes = [NSAttributedString.Key : Any]()
-        attributes[.font] = UIFont.defaultFont(ofSize: 14)
-        attributes[.foregroundColor] = UIColor(asset: .foreground)
-        attributes[.paragraphStyle] = paragraphStyle
-    
-        upvotesLabel.attributedText = .init(string: "▲\n\(votesCount ?? 0)", attributes: attributes)
     }
     
     private func addObservers() {

@@ -16,8 +16,10 @@ final class ProductHuntTests: XCTestCase {
             XCTAssertNoThrow(try fileManager.createDirectory(at: url, withIntermediateDirectories: false))
         }
         
-        let button = PHButton(frame: .init(x: 0, y: 0, width: 200, height: 50))
-                
+        let button = PHButton(frame: .init(x: 0, y: 0, width: 260, height: 60))
+        button.setVotesCount(872)
+        button.layoutIfNeeded()
+
         if let data = button.snapshot().pngData() {
             let url = url.appendingPathComponent("snapshot-product-hunt-button").appendingPathExtension("png")
             print(url.path)
@@ -33,12 +35,8 @@ final class ProductHuntTests: XCTestCase {
 }
 
 fileprivate extension PHButton {
-    var size: CGSize {
-        bounds.insetBy(dx: -layer.shadowOffset.width, dy: -layer.shadowOffset.height).size
-    }
-    
     func snapshot() -> UIImage {
-        UIGraphicsImageRenderer(size: size).image { context in
+        UIGraphicsImageRenderer(size: bounds.size).image { context in
             layer.render(in: context.cgContext)
         }
     }

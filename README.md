@@ -43,7 +43,7 @@ import ProductHunt
 ```swift
 PHManager.shared.post = .slug("timizer")
 ```
-3. In the view controller, override the `viewDidLoad` method to set the presenting view controller of the `BMCManager` object.
+3. In the view controller, override the `viewDidLoad` method to set the presenting view controller of the `PHManager` object.
 ```swift
 PHManager.shared.presentingViewController = self
 ```

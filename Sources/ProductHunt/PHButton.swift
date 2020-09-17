@@ -22,8 +22,13 @@ public class PHButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        setup()
         addObservers()
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setup()
     }
     
     deinit {

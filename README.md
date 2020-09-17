@@ -5,21 +5,21 @@
 ### [Product Hunt](https://www.producthunt.com) surfaces the best new products, every day. It's a place for product-loving enthusiasts to share and geek out about the latest mobile apps, websites, hardware projects, and tech creations.
 
 >[...] Product Hunt has become a must-read site in Silicon Valley.
-[The Verge](https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/theverge.png)
+[The Verge](https://github.com/appcraftstudio/producthunt/raw/master/Images/theverge.png)
 
 >[...] Product Hunt is an online community that caters to the tech product fanatics.
-[Venture Beat](https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/venturebeat.png)
+[Venture Beat](https://github.com/appcraftstudio/producthunt/raw/master/Images/venturebeat.png)
 
 >[Product Hunt] ballooned in popularity since its humble beginnings and has since become a destination site where folks could submit and vote on their favorite tech products.
-[TechCrunch](https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/techcrunch.png)
+[TechCrunch](https://github.com/appcraftstudio/producthunt/raw/master/Images/techcrunch.png)
 
 >[...] Product Hunt has evolved from a small email list into a must-read for those in the tech and startup space to discover the next great product.
-[Business Insider](https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/businessinsider.png)
+[Business Insider](https://github.com/appcraftstudio/producthunt/raw/master/Images/businessinsider.png)
 
 <p align="center">
 <br>
-<img src="https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/screenshot-button.png" width="320">
-<img src="https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/screenshot-post-page.png" width="320">
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-button.png" width="320">
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-post-page.png" width="320">
 </p>
 
 ## Features

@@ -5,6 +5,7 @@
 //  Created by François Boulais on 17/09/2020.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 enum ColorAsset: String {
@@ -16,3 +17,4 @@ extension UIColor {
         self.init(named: asset.rawValue, in: .module, compatibleWith: nil)
     }
 }
+#endif

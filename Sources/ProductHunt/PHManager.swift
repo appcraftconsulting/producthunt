@@ -5,6 +5,7 @@
 //  Created by François Boulais on 17/09/2020.
 //
 
+#if canImport(UIKit)
 import SafariServices
 import UIKit
 
@@ -84,3 +85,4 @@ public class PHManager {
         }
     }
 }
+#endif

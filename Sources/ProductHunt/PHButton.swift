@@ -5,6 +5,7 @@
 //  Created by François Boulais on 14/09/2020.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 @IBDesignable
@@ -115,3 +116,4 @@ public class PHButton: UIButton {
         }
     }
 }
+#endif

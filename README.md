@@ -14,7 +14,7 @@
 <img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/techcrunch.png" width="161">
 
 >[...] Product Hunt has evolved from a small email list into a must-read for those in the tech and startup space to discover the next great product.
-<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/businessinsider.png" width="161">
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/businessinsider.png" width="75">
 
 <p align="center">
 <br>
@@ -48,7 +48,7 @@ BMCManager.shared.presentingViewController = self
 ```
 4. Add a `PHButton` to your storyboard, XIB file, or instantiate it programmatically. To add the button to your storyboard or XIB file, add a View and set its custom class to `PHButton`.
 5. **Optional**: If you want to customize the button, do the following:
-[<img src="https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/snapshot-product-hunt-button.png">](https://www.producthunt.com/appcraftstudio)
+[<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button.png">](https://www.producthunt.com/appcraftstudio)
 
 ## Installation
 

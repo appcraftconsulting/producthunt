@@ -26,6 +26,7 @@
 
 - [X] Dark mode support
 - [X] Data persistence
+- [X] Auto refresh every 5 minutes
 
 ## Requirements
 
@@ -36,15 +37,15 @@
 
 1. Import the ProductHunt framework in your `UIApplicationDelegate`:
 ```swift
-import BuyMeACoffee
+import ProductHunt
 ```
 2. Configure the `PHManager` shared instance with the post you want to highlight in your app's `application:didFinishLaunchingWithOptions:` method:
 ```swift
-BMCManager.shared.post = .slug("timizer")
+PHManager.shared.post = .slug("timizer")
 ```
 3. In the view controller, override the `viewDidLoad` method to set the presenting view controller of the `BMCManager` object.
 ```swift
-BMCManager.shared.presentingViewController = self
+PHManager.shared.presentingViewController = self
 ```
 4. Add a `PHButton` to your storyboard, XIB file, or instantiate it programmatically. To add the button to your storyboard or XIB file, add a View and set its custom class to `PHButton`.
 

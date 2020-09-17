@@ -18,8 +18,8 @@
 
 <p align="center">
 <br>
-<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-button.png" width="320">
-<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-post-page.png" width="320">
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-button.PNG" width="320">
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-post-page.PNG" width="320">
 </p>
 
 ## Features
@@ -32,7 +32,7 @@
 - Swift 5.0
 - Xcode 11.x
 
-## Implement Buy Me a Coffee
+## Implement Product Hunt
 
 1. Import the ProductHunt framework in your `UIApplicationDelegate`:
 ```swift
@@ -47,8 +47,8 @@ BMCManager.shared.post = .slug("timizer")
 BMCManager.shared.presentingViewController = self
 ```
 4. Add a `PHButton` to your storyboard, XIB file, or instantiate it programmatically. To add the button to your storyboard or XIB file, add a View and set its custom class to `PHButton`.
-5. **Optional**: If you want to customize the button, do the following:
-[<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button.png">](https://www.producthunt.com/appcraftstudio)
+
+![Product Hunt badge]("https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button.png")
 
 ## Installation
 

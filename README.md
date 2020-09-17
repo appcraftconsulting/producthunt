@@ -5,16 +5,16 @@
 ### [Product Hunt](https://www.producthunt.com) surfaces the best new products, every day. It's a place for product-loving enthusiasts to share and geek out about the latest mobile apps, websites, hardware projects, and tech creations.
 
 >[...] Product Hunt has become a must-read site in Silicon Valley.
-![The Verge](https://github.com/appcraftstudio/producthunt/raw/master/Images/theverge.png)
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/theverge.png" width="119">
 
 >[...] Product Hunt is an online community that caters to the tech product fanatics.
-![Venture Beat](https://github.com/appcraftstudio/producthunt/raw/master/Images/venturebeat.png)
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/venturebeat.png" width="167">
 
 >[Product Hunt] ballooned in popularity since its humble beginnings and has since become a destination site where folks could submit and vote on their favorite tech products.
-![TechCrunch](https://github.com/appcraftstudio/producthunt/raw/master/Images/techcrunch.png)
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/techcrunch.png" width="161">
 
 >[...] Product Hunt has evolved from a small email list into a must-read for those in the tech and startup space to discover the next great product.
-![Business Insider](https://github.com/appcraftstudio/producthunt/raw/master/Images/businessinsider.png)
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/businessinsider.png" width="161">
 
 <p align="center">
 <br>

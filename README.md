@@ -54,8 +54,6 @@ PHManager.shared.presentingViewController = self
 <img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button.png" width="260">
 </p>
 
-![Product Hunt badge]("")
-
 ## Installation
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)

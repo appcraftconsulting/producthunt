@@ -9,7 +9,7 @@ import SafariServices
 import UIKit
 
 public class PHManager {
-    static let shared = PHManager()
+    public static let shared = PHManager()
     
     /// The post that will be linked to the `PHButton`.
     public var post: PHPost? {

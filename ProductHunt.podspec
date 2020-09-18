@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = 'ProductHunt'
-  spec.version               = '1.0.0'
+  spec.version               = '1.0.1'
   spec.license               = { :type => "MIT", :file => "LICENSE" }
                                
   spec.homepage              = 'https://www.producthunt.com'
@@ -10,9 +10,6 @@ Pod::Spec.new do |spec|
   spec.summary               = 'Product Hunt badge for iOS'
   spec.source                = { :git => 'https://github.com/appcraftstudio/producthunt.git', :tag => "#{spec.version}" }
   
-  spec.screenshots           = [ 'https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/screenshot-buymeacoffee-home.png',
-                                 'https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/screenshot-buymeacoffee-apple-pay.png' ]
-                                 
   spec.ios.deployment_target = '11.0'
   spec.platform              = :ios, '11.0'
   spec.swift_version         = '5.0'

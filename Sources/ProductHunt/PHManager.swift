@@ -33,9 +33,9 @@ public class PHManager: NSObject, SFSafariViewControllerDelegate {
      Configure the manager for product synchronization
      - parameters:
         - post: The post that will be linked to the `PHButton` (either defined with slug or id)
-        - token: Your Product Hunt developer token
+        - token: Your Product Hunt developer token (https://www.producthunt.com/v2/oauth/applications)
      */
-    public func configure(forPost post: PHPost, using token: String) {
+    public func configure(forPost post: PHPost, token: String) {
         self.post = post
         self.token = token
         

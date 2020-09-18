@@ -11,26 +11,35 @@ import UIKit
 
 public class PHManager: NSObject, SFSafariViewControllerDelegate {
     public static let shared = PHManager()
-    
-    /// The post that will be linked to the `PHButton`.
-    public var post: PHPost? {
-        didSet {
-            fetchVotesCount()
-        }
-    }
-    
+        
     /// The view controller used to present post page.
     public var presentingViewController: UIViewController?
     
     private var session = URLSession.shared
-    private let token = "Ou0qvqpdX7dT1Y4h4CSK3aKMW6-BaxzE6MxDNeop1Zk"
-    
+    public var token: String?
+    private var post: PHPost?
+
     private override init() {
         super.init()
         
         Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { [weak self] timer in
             self?.fetchVotesCount()
         }
+    }
+    
+    // MARK: - Public functions
+    
+    /**
+     Configure the manager for product synchronization
+     - parameters:
+        - post: The post that will be linked to the `PHButton` (either defined with slug or id)
+        - token: Your Product Hunt developer token
+     */
+    public func configure(forPost post: PHPost, using token: String) {
+        self.post = post
+        self.token = token
+        
+        fetchVotesCount()
     }
     
     // MARK: - Internal functions
@@ -58,7 +67,11 @@ public class PHManager: NSObject, SFSafariViewControllerDelegate {
     // MARK: - Private functions
 
     @objc private func fetchVotesCount() {
-        guard let url = URL(string: "https://api.producthunt.com/v2/api/graphql"), let post = post else {
+        guard let post = post, let token = token else {
+            fatalError("PHManager instance has not been configured.")
+        }
+        
+        guard let url = URL(string: "https://api.producthunt.com/v2/api/graphql") else {
             return
         }
         

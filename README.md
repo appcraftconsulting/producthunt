@@ -74,7 +74,7 @@ Then run a `pod install` inside your terminal, or from CocoaPods.app.
 
 ---
 
-<a href="https://www.producthunt.com/posts/product-hunt-badge-for-ios?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-product-hunt-badge-for-ios" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=263354&theme=dark" alt="Product Hunt badge for iOS - Swift framework to embed Product Hunt in your apps! | Product Hunt Embed" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://www.producthunt.com/posts/product-hunt-badge-for-ios-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-product-hunt-badge-for-ios-2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=263397&theme=dark" alt="Product Hunt badge for iOS - Swift framework to add Product Hunt badge in your iOS apps! | Product Hunt Embed" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 <a href="https://www.buymeacoffee.com/appcraftstudio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 

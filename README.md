@@ -44,7 +44,7 @@ import ProductHunt
 - Your Product Hunt developer token (https://www.producthunt.com/v2/oauth/applications)
 
 ```swift
-PHManager.shared.configure(forPost: .slug("timizer"), using: "Ou0qvqpdX7dT1Y4h4CSK3aKMW6-BaxzE6MxDNeop1Zk")
+PHManager.shared.configure(forPost: .slug("timizer"), token: "Ou0qvqpdX7dT1Y4h4CSK3aKMW6-BaxzE6MxDNeop1Zk")
 ```
 3. In the view controller, override the `viewDidLoad` method to set the presenting view controller of the `PHManager` object.
 ```swift

@@ -16,7 +16,7 @@ public class PHManager: NSObject, SFSafariViewControllerDelegate {
     public var presentingViewController: UIViewController?
     
     private var session = URLSession.shared
-    public var token: String?
+    private var token: String?
     private var post: PHPost?
 
     private override init() {

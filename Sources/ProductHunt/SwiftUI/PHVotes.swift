@@ -1,5 +1,5 @@
 //
-//  ProductHuntVotes.swift
+//  PHVotes.swift
 //  ProductHunt
 //  
 //
@@ -10,21 +10,15 @@
 #if canImport(UIKit)
 import Foundation
 
-
-
-//MARK: - Class
+// MARK: - Class
 @available(iOS 14, *)
-class ProductHuntVotes: ObservableObject {
-    
-    
-    
-    //MARK: Properties
-    @Published var votes: Int = 0
+class PHVotes: ObservableObject {
+
+    // MARK: Properties
+    @Published var value: Int = 0
     private var observer: NSKeyValueObservation?
-    
-    
-    
-    //MARK: Lifecycle
+        
+    // MARK: Lifecycle
     init(post: PHPost, token: String) {
         
         /// Initialize PHManager
@@ -33,7 +27,7 @@ class ProductHuntVotes: ObservableObject {
         /// Initialize observer
         observer = UserDefaults.standard.observe(\.productHuntVotesCount, options: [.initial, .new]) { [weak self] defaults, change in
             DispatchQueue.main.async {
-                self?.votes = ( change.newValue ?? 0 )
+                self?.value = ( change.newValue ?? 0 )
             }
         }
     }
@@ -42,8 +36,4 @@ class ProductHuntVotes: ObservableObject {
         observer?.invalidate()
     }
 }
-
-
-
-/// Endif
 #endif

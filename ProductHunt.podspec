@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = 'ProductHunt'
-  spec.version               = '1.0.2'
+  spec.version               = '1.0.3'
   spec.license               = { :type => "MIT", :file => "LICENSE" }
                                
   spec.homepage              = 'https://www.producthunt.com'
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.source_files          = 'Sources/**/*.swift', 'Bundle.swift'
   spec.resources             = 'Sources/**/Resources/*'
 
-  spec.ios.framework         = 'UIKit', 'WebKit'
+  spec.ios.framework         = 'UIKit', 'WebKit', 'SwiftUI'
   
   spec.test_spec 'ProductHuntTests' do |test_spec|
     test_spec.source_files   = 'Tests/ProductHuntTests/*.{swift}'

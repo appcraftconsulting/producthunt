@@ -5,27 +5,31 @@
 //  Created by Julien Lacroix on 04/11/2020.
 //
 
-/// We want ProductHuntButton available for iOS, tvOS, and watchOS.
 #if canImport(UIKit)
 import SwiftUI
 import SafariServices
 
 // MARK: - View
+
 @available(iOS 14, *)
 public struct ProductHuntButton: View {
         
-    // MARK: Properties
+    // MARK: - Properties
+    
     @State private var isShowingSafariView: Bool = false
     @ObservedObject private var productHuntVotes: PHVotes
+    
     private var post: PHPost
         
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
+    
     public init(post: PHPost, token: String) {
         self.post = post
-        self.productHuntVotes = PHVotes(post: post, token: token)
+        self.productHuntVotes = .init(post: post, token: token)
     }
         
-    // MARK: Body
+    // MARK: - Body
+    
     public var body: some View {
         Button(action: { isShowingSafariView = true }, label: {
             ZStack {
@@ -54,7 +58,8 @@ public struct ProductHuntButton: View {
         .sheet(isPresented: $isShowingSafariView, content: presentSafariViewIfNecessary)
     }
     
-    // MARK: Private methods
+    // MARK: - Private functions
+    
     @ViewBuilder private func presentSafariViewIfNecessary() -> some View {
         if let url = post.url {
             SafariView(url: url)
@@ -66,9 +71,11 @@ public struct ProductHuntButton: View {
 @available(iOS 14, *)
 struct SafariView: UIViewControllerRepresentable {
     let url: URL
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
+        .init(url: url)
     }
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {}
+    
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) { }
 }
 #endif

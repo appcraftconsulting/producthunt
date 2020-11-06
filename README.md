@@ -76,7 +76,7 @@ ProductHuntButton(post: .slug("timizer"), token: "<YOUR_PRODUCT_HUNT_TOKEN>")
 
 <p align="center">
 <br>
-<img src="https://github.com/JulienLacr0ix/producthunt/raw/master/Images/snapshot-product-hunt-button-swiftui.png" width="260">
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button-swiftui.png" width="260">
 </p>
 
 ## Installation

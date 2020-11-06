@@ -1,7 +1,7 @@
 //
-//  File.swift
+//  String.swift
+//  ProductHunt
 //  
-//
 //  Created by François Boulais on 06/11/2020.
 //
 

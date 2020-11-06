@@ -1,7 +1,6 @@
 //
 //  PHVotes.swift
 //  ProductHunt
-//  
 //
 //  Created by Julien Lacroix on 05/11/2020.
 //

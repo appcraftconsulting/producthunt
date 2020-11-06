@@ -33,7 +33,7 @@
 - Swift 5.0
 - Xcode 11.x
 
-## Implement Product Hunt
+## Implement Product Hunt - UIKit
 
 1. Import the ProductHunt framework in your `UIApplicationDelegate`:
 ```swift
@@ -57,6 +57,28 @@ PHManager.shared.presentingViewController = self
 <img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button.png" width="260">
 </p>
 
+## Implement Product Hunt - SwiftUI
+
+1. Import the ProductHunt framework in your view struct:
+```swift
+import ProductHunt
+```
+
+2. Add the `ProductHuntButton` to your view with:
+- The post that will be linked to the button (either defined by slug or id)
+- Your Product Hunt developer token (https://www.producthunt.com/v2/oauth/applications)
+
+```swift
+ProductHuntButton(post: .slug("timizer"), token: "<YOUR_PRODUCT_HUNT_TOKEN>")
+  .frame(width: 300.0, height: 50.0, alignment: .center)
+  .padding(10.0)
+```
+
+<p align="center">
+<br>
+<img src="https://github.com/JulienLacr0ix/producthunt/raw/master/Images/snapshot-product-hunt-button-swiftui.png" width="260">
+</p>
+
 ## Installation
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
@@ -74,6 +96,15 @@ Then run a `pod install` inside your terminal, or from CocoaPods.app.
 1. Using Xcode 11 or above go to *File* > *Swift Packages* > *Add Package Dependency*
 2. Paste the project URL: https://github.com/appcraftstudio/producthunt.git
 3. Click on next and select the project target
+
+
+## Contributors ✨
+
+| Name                | GitHub                                       | Twitter                                                |
+| :------------------ | :------------------------------------------- | :---------------------------------------------------- |
+| **François Boulais** | [**frboulais**](https://github.com/frboulais) | [**@frboulais**](https://twitter.com/frboulais) |
+| **Julien Lacroix** | [**JulienLacr0ix**](https://github.com/JulienLacr0ix) | [**@JulienLacr0ix**](https://twitter.com/JulienLacr0ix) |
+
 
 ---
 

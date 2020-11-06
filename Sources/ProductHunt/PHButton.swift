@@ -59,7 +59,8 @@ public class PHButton: UIButton {
         attributes[.foregroundColor] = UIColor(asset: .foreground)
         attributes[.paragraphStyle] = paragraphStyle
     
-        upvotesLabel.attributedText = .init(string: "▲\n\(votesCount ?? 0)", attributes: attributes)
+        let string = [.buttonUpvote, .init(votesCount ?? 0)].joined(separator: "\n")
+        upvotesLabel.attributedText = .init(string: string, attributes: attributes)
     }
     
     // MARK: - Private functions
@@ -85,10 +86,10 @@ public class PHButton: UIButton {
         let attributedTitle = NSMutableAttributedString(string: " ", attributes: attributes)
         
         attributes[.font] = UIFont.defaultFont(ofSize: 8)
-        attributedTitle.append(.init(string: "FEATURED ON\n", attributes: attributes))
+        attributedTitle.append(.init(string: String.buttonFeaturedOn.appending("\n"), attributes: attributes))
         
         attributes[.font] = UIFont.defaultFont(ofSize: 22)
-        attributedTitle.append(.init(string: "Product Hunt", attributes: attributes))
+        attributedTitle.append(.init(string: .buttonProductHunt, attributes: attributes))
         
         setAttributedTitle(attributedTitle, for: .normal)
         

@@ -8,15 +8,7 @@
 import Foundation
 
 extension String {
-    static var buttonFeaturedOn: String {
-        "FEATURED ON"
-    }
-    
-    static var buttonProductHunt: String {
-        "Product Hunt"
-    }
-    
-    static var buttonUpvote: String {
-        "▲"
-    }
+    static let buttonFeaturedOn = "FEATURED ON"
+    static let buttonProductHunt = "Product Hunt"
+    static let buttonUpvote = "▲"
 }

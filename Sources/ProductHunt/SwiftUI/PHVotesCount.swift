@@ -1,5 +1,5 @@
 //
-//  PHVotes.swift
+//  PHVotesCount.swift
 //  ProductHunt
 //
 //  Created by Julien Lacroix on 05/11/2020.
@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Class
 
 @available(iOS 14, *)
-class PHVotes: ObservableObject {
+class PHVotesCount: ObservableObject {
 
     // MARK: - Properties
     

@@ -17,7 +17,7 @@ public struct ProductHuntButton: View {
     // MARK: - Properties
     
     @State private var isShowingSafariView: Bool = false
-    @ObservedObject private var productHuntVotes: PHVotes
+    @ObservedObject private var votesCount: PHVotesCount
     
     private var post: PHPost
         
@@ -25,7 +25,7 @@ public struct ProductHuntButton: View {
     
     public init(post: PHPost, token: String) {
         self.post = post
-        self.productHuntVotes = .init(post: post, token: token)
+        self.votesCount = .init(post: post, token: token)
     }
         
     // MARK: - Body
@@ -46,7 +46,7 @@ public struct ProductHuntButton: View {
                             .font(.defaultFont(size: 22.0))
                     }
                     Spacer()
-                    Text("▲\n\(productHuntVotes.value)")
+                    Text("▲\n\(votesCount.value)")
                         .foregroundColor(.foreground)
                         .font(.defaultFont(size: 14.0))
                         .multilineTextAlignment(.center)

@@ -38,15 +38,15 @@ public struct ProductHuntButton: View {
                 HStack {
                     Image("logo")
                     VStack(alignment: .leading, spacing: -2.0) {
-                        Text("FEATURED ON")
+                        Text(String.buttonFeaturedOn)
                             .foregroundColor(.foreground)
                             .font(.defaultFont(size: 8.0))
-                        Text("Product Hunt")
+                        Text(String.buttonProductHunt)
                             .foregroundColor(.foreground)
                             .font(.defaultFont(size: 22.0))
                     }
                     Spacer()
-                    Text("▲\n\(votesCount.value)")
+                    Text([.buttonUpvote, .init(votesCount.value)].joined(separator: "\n"))
                         .foregroundColor(.foreground)
                         .font(.defaultFont(size: 14.0))
                         .multilineTextAlignment(.center)

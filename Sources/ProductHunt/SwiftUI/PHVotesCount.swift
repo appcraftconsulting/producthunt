@@ -25,7 +25,7 @@ class PHVotesCount: ObservableObject {
         
         observer = UserDefaults.standard.observe(\.productHuntVotesCount, options: [.initial, .new]) { [weak self] defaults, change in
             DispatchQueue.main.async {
-                self?.value = ( change.newValue ?? 0 )
+                self?.value = change.newValue ?? 0
             }
         }
     }

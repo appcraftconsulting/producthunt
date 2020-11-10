@@ -15,26 +15,28 @@ import SafariServices
 public struct ProductHuntButton: View {
     
     // MARK: - Enum
+    
     public enum Mode {
-       case preview(voteCount: Int)
+       case preview(votesCount: Int)
        case `default`
     }
         
     // MARK: - Properties
-    var mode: Mode
-    @State private var isShowingSafariView: Bool = false
-    @ObservedObject private var votesCount: PHVotesCount
     
+    @State private var isShowingSafariView: Bool = false
+
+    private let mode: Mode
+    private let post: PHPost
+    
+    @ObservedObject private var votesCount: PHVotesCount
     private var votes: Int {
         switch mode {
         case .default:
             return votesCount.value
-        case .preview(let votes):
-            return votes
+        case .preview(let votesCount):
+            return votesCount
         }
     }
-    
-    private var post: PHPost
         
     // MARK: - Lifecycle
     
@@ -86,6 +88,7 @@ public struct ProductHuntButton: View {
 
 
 // MARK: - SafariView
+
 @available(iOS 14, *)
 struct SafariView: UIViewControllerRepresentable {
     let url: URL

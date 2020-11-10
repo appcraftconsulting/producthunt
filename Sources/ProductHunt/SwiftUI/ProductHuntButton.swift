@@ -15,7 +15,7 @@ import SafariServices
 public struct ProductHuntButton: View {
     
     // MARK: - Enum
-    enum Mode {
+    public enum Mode {
        case preview(voteCount: Int)
        case `default`
     }

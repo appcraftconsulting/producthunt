@@ -9,21 +9,19 @@
 import SwiftUI
 import SafariServices
 
-// MARK: - Custom types
-
-enum Mode {
-   case preview(voteCount: Int)
-   case `default`
-}
-
 // MARK: - View
 
 @available(iOS 14, *)
 public struct ProductHuntButton: View {
+    
+    // MARK: - Enum
+    enum Mode {
+       case preview(voteCount: Int)
+       case `default`
+    }
         
     // MARK: - Properties
-    
-    var mode: Mode = .default
+    var mode: Mode
     @State private var isShowingSafariView: Bool = false
     @ObservedObject private var votesCount: PHVotesCount
     
@@ -40,9 +38,10 @@ public struct ProductHuntButton: View {
         
     // MARK: - Lifecycle
     
-    public init(post: PHPost, token: String) {
+    public init(post: PHPost, token: String, mode: Mode = .default) {
         self.post = post
         self.votesCount = .init(post: post, token: token)
+        self.mode = mode
     }
         
     // MARK: - Body

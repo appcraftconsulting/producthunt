@@ -16,12 +16,6 @@
 >[...] Product Hunt has evolved from a small email list into a must-read for those in the tech and startup space to discover the next great product.
 <img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/businessinsider.png" width="75">
 
-<p align="center">
-<br>
-<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-button.PNG" width="320">
-<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-post-page.PNG" width="320">
-</p>
-
 ## Features
 
 - [X] Dark mode support
@@ -76,7 +70,7 @@ ProductHuntButton(post: .slug("<YOUR_SLUG>"), token: "<YOUR_PRODUCT_HUNT_TOKEN>"
 
 <p align="center">
 <br>
-<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/snapshot-product-hunt-button-swiftui.png" width="260">
+<img src="https://github.com/appcraftstudio/producthunt/raw/master/Images/screenshot-swiftui.png" width="800">
 </p>
 
 ## Installation

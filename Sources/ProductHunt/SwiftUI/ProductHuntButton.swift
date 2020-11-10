@@ -13,19 +13,37 @@ import SafariServices
 
 @available(iOS 14, *)
 public struct ProductHuntButton: View {
+    
+    // MARK: - Enum
+    
+    public enum Mode {
+       case preview(votesCount: Int)
+       case `default`
+    }
         
     // MARK: - Properties
     
     @State private var isShowingSafariView: Bool = false
-    @ObservedObject private var votesCount: PHVotesCount
+
+    private let mode: Mode
+    private let post: PHPost
     
-    private var post: PHPost
+    @ObservedObject private var votesCount: PHVotesCount
+    private var votes: Int {
+        switch mode {
+        case .default:
+            return votesCount.value
+        case .preview(let votesCount):
+            return votesCount
+        }
+    }
         
     // MARK: - Lifecycle
     
-    public init(post: PHPost, token: String) {
+    public init(post: PHPost, token: String, mode: Mode = .default) {
         self.post = post
         self.votesCount = .init(post: post, token: token)
+        self.mode = mode
     }
         
     // MARK: - Body
@@ -46,7 +64,7 @@ public struct ProductHuntButton: View {
                             .font(.defaultFont(size: 22.0))
                     }
                     Spacer()
-                    Text([.buttonUpvote, .init(votesCount.value)].joined(separator: "\n"))
+                    Text([.buttonUpvote, .init(votes)].joined(separator: "\n"))
                         .foregroundColor(.foreground)
                         .font(.defaultFont(size: 14.0))
                         .multilineTextAlignment(.center)
@@ -70,6 +88,7 @@ public struct ProductHuntButton: View {
 
 
 // MARK: - SafariView
+
 @available(iOS 14, *)
 struct SafariView: UIViewControllerRepresentable {
     let url: URL

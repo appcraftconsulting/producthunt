@@ -69,8 +69,8 @@ import ProductHunt
 - Your Product Hunt developer token (https://www.producthunt.com/v2/oauth/applications)
 
 ```swift
-ProductHuntButton(post: .slug("timizer"), token: "<YOUR_PRODUCT_HUNT_TOKEN>")
-  .frame(width: 300.0, height: 50.0, alignment: .center)
+ProductHuntButton(post: .slug("<YOUR_SLUG>"), token: "<YOUR_PRODUCT_HUNT_TOKEN>")
+  .frame(width: 260.0, height: 60.0, alignment: .center)
   .padding(10.0)
 ```
 

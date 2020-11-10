@@ -36,7 +36,7 @@ public struct ProductHuntButton: View {
                 Color.background
                 RoundedRectangle(cornerRadius: 12.0).stroke(Color.border, lineWidth: 2.0)
                 HStack {
-                    Image("logo")
+                    Image("logo", bundle: .module)
                     VStack(alignment: .leading, spacing: -2.0) {
                         Text(String.buttonFeaturedOn)
                             .foregroundColor(.foreground)
@@ -66,6 +66,8 @@ public struct ProductHuntButton: View {
         }
     }
 }
+
+
 
 // MARK: - SafariView
 @available(iOS 14, *)

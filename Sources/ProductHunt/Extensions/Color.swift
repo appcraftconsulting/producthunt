@@ -13,15 +13,15 @@ import SwiftUI
 @available(iOS 14, *)
 extension Color {
     static var background: Color {
-        .init("background")
+        .init("background", bundle: .module)
     }
     
     static var foreground: Color {
-        .init("foreground")
+        .init("foreground", bundle: .module)
     }
     
     static var border: Color {
-        .init("border")
+        .init("border", bundle: .module)
     }
 }
 #endif

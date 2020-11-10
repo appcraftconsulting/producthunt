@@ -9,6 +9,13 @@
 import SwiftUI
 import SafariServices
 
+// MARK: - Custom types
+
+enum Mode {
+   case preview(voteCount: Int)
+   case `default`
+}
+
 // MARK: - View
 
 @available(iOS 14, *)
@@ -16,8 +23,18 @@ public struct ProductHuntButton: View {
         
     // MARK: - Properties
     
+    var mode: Mode = .default
     @State private var isShowingSafariView: Bool = false
     @ObservedObject private var votesCount: PHVotesCount
+    
+    private var votes: Int {
+        switch mode {
+        case .default:
+            return votesCount.value
+        case .preview(let votes):
+            return votes
+        }
+    }
     
     private var post: PHPost
         
@@ -46,7 +63,7 @@ public struct ProductHuntButton: View {
                             .font(.defaultFont(size: 22.0))
                     }
                     Spacer()
-                    Text([.buttonUpvote, .init(votesCount.value)].joined(separator: "\n"))
+                    Text([.buttonUpvote, .init(votes)].joined(separator: "\n"))
                         .foregroundColor(.foreground)
                         .font(.defaultFont(size: 14.0))
                         .multilineTextAlignment(.center)

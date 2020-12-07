@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 public class PHTopPostDailyButton: UIButton {
-    enum Position: String {
+    public enum Position: String {
         case first
         case second
         case third
@@ -41,7 +41,7 @@ public class PHTopPostDailyButton: UIButton {
         }
     }
     
-    var position: Position = .first
+    public var position: Position = .first
     
     convenience init(frame: CGRect, position: Position) {
         self.init(frame: frame)
@@ -97,11 +97,13 @@ public class PHTopPostDailyButton: UIButton {
         
         setAttributedTitle(attributedTitle, for: .normal)
         
-        contentEdgeInsets = .init(top: 10, left: 0, bottom: 8, right: 12)
-        titleEdgeInsets = .init(top: 0, left: -6, bottom: 0, right: -6)
-        imageEdgeInsets = .init(top: 0, left: -18, bottom: 0, right: 6)
+        contentEdgeInsets = .init(top: 12, left: 32, bottom: 10, right: 32)
+        titleEdgeInsets = .init(top: 0, left: 6, bottom: 0, right: -6)
+        imageEdgeInsets = .init(top: 0, left: -6, bottom: 0, right: 6)
         
         titleLabel?.numberOfLines = 0
+        
+        addTarget(PHManager.shared, action: #selector(PHManager.shared.showPostPage), for: .touchUpInside)
     }
 }
 #endif

@@ -60,7 +60,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "cp ~/Library/Developer/CoreSimulator/Devices/$TARGET_DEVICE_IDENTIFIER/data/Library/Caches/snapshot-product-hunt-button.png $WORKSPACE_PATH/../../../Images&#10;">
+               scriptText = "cp ~/Library/Developer/CoreSimulator/Devices/$TARGET_DEVICE_IDENTIFIER/data/Library/Caches/snapshot-featured-button.png $WORKSPACE_PATH/../../../Images&#10;cp ~/Library/Developer/CoreSimulator/Devices/$TARGET_DEVICE_IDENTIFIER/data/Library/Caches/snapshot-top-post-daily-button.png $WORKSPACE_PATH/../../../Images&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"

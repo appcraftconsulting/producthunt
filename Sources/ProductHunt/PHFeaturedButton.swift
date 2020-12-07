@@ -1,5 +1,5 @@
 //
-//  PHButton.swift
+//  PHFeaturedButton.swift
 //  ProductHunt
 //
 //  Created by François Boulais on 14/09/2020.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class PHButton: UIButton {
+public class PHFeaturedButton: UIButton {
     private let upvotesLabel = UILabel()
     private var observer: NSKeyValueObservation?
 

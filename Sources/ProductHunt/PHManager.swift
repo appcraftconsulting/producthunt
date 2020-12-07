@@ -32,7 +32,7 @@ public class PHManager: NSObject, SFSafariViewControllerDelegate {
     /**
      Configure the manager for product synchronization
      - parameters:
-        - post: The post that will be linked to the `PHButton` (either defined with slug or id)
+        - post: The post that will be linked to the `PHFeaturedButton` (either defined with slug or id)
         - token: Your Product Hunt developer token (https://www.producthunt.com/v2/oauth/applications)
      */
     public func configure(forPost post: PHPost, token: String) {
@@ -90,7 +90,8 @@ public class PHManager: NSObject, SFSafariViewControllerDelegate {
                 if let data = data, let response = try? JSONDecoder().decode(PHResponse.self, from: data) {
                     if let votesCount = response.data?.post.votesCount {
                         DispatchQueue.main.async {
-                            print("New votes count received: \(votesCount)")
+                            let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                            print(json)
                             UserDefaults.standard.setVotesCount(votesCount)
                         }
                     } else if let description = response.errors?.first?.description {

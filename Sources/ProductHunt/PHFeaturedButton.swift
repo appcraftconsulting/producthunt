@@ -93,7 +93,7 @@ public class PHFeaturedButton: UIButton {
         
         setAttributedTitle(attributedTitle, for: .normal)
         
-        contentEdgeInsets = .init(top: 10, left: 14, bottom: 8, right: 62)
+        contentEdgeInsets = .init(top: 10, left: 14, bottom: 10, right: 62)
         titleEdgeInsets = .init(top: 0, left: 4, bottom: 0, right: -4)
         imageEdgeInsets = .init(top: 0, left: -4, bottom: 0, right: 4)
         

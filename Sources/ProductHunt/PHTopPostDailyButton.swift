@@ -89,15 +89,15 @@ public class PHTopPostDailyButton: UIButton {
         attributes[.paragraphStyle] = paragraphStyle
         let attributedTitle = NSMutableAttributedString(string: " ", attributes: attributes)
         
-        attributes[.font] = UIFont.defaultFont(ofSize: 9)
+        attributes[.font] = UIFont.defaultFont(ofSize: 10)
         attributedTitle.append(.init(string: String.buttonProductHunt.appending("\n"), attributes: attributes))
         
-        attributes[.font] = UIFont.defaultFont(ofSize: 16)
+        attributes[.font] = UIFont.defaultFont(ofSize: 17)
         attributedTitle.append(.init(string: position.title, attributes: attributes))
         
         setAttributedTitle(attributedTitle, for: .normal)
         
-        contentEdgeInsets = .init(top: 12, left: 32, bottom: 10, right: 32)
+        contentEdgeInsets = .init(top: 12, left: 32, bottom: 12, right: 32)
         titleEdgeInsets = .init(top: 0, left: 6, bottom: 0, right: -6)
         imageEdgeInsets = .init(top: 0, left: -6, bottom: 0, right: 6)
         

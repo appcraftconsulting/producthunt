@@ -68,7 +68,8 @@ public class PHManager: NSObject, SFSafariViewControllerDelegate {
 
     @objc private func fetchVotesCount() {
         guard let post = post, let token = token else {
-            fatalError("PHManager instance has not been configured.")
+            print("PHManager instance has not been configured.")
+            return
         }
         
         guard let url = URL(string: "https://api.producthunt.com/v2/api/graphql") else {
